@@ -1,0 +1,28 @@
+.text{
+    -fx-font-smoothing-type: gray;
+}
+
+.root{
+    -fx-background-color: linear-gradient(to bottom right, #85FFBD 0%, #FFFB7D 100%);
+    -fx-background-radius: 40 40 40 40;
+    -fx-border-radius: 40 40 40 40;
+}
+.button {
+  -fx-background-color: white;
+  -fx-color: white;
+  -fx-padding: 8px 32px;
+  -fx-text-align: center;
+  -fx-text-decoration: none;
+  -fx-font-family: "Arial Rounded MT Bold";
+  -fx-display: inline-block;
+  -fx-font-size: 18px;
+  -fx-background-radius: 50px;
+  -fx-border-radius: 50px;
+  -fx-border-width: 2px;
+  -fx-border-color: linear-gradient(to bottom right, #30cfd0 0%, #330867 100%);
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom right, #30cfd0 0%, #330867 100%);
+    -fx-color: black;
+}

@@ -1,0 +1,96 @@
+.text{
+    -fx-font-smoothing-type: gray;
+}
+
+#quadraticFunctionLabel{
+    -fx-alignment: center;
+}
+.root{
+    -fx-background-color: linear-gradient(to bottom right, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    -fx-background-radius: 40 40 40 40;
+    -fx-border-radius: 40 40 40 40;
+}
+#box{
+     -fx-background-color: linear-gradient(to bottom, #90F7EC 10%, #32CCBC 100%)
+}
+#findXIntButton{
+  -fx-background-color: rgb(63, 63, 63);
+  -fx-color: black;
+  -fx-padding: 5px 15px;
+  -fx-text-align: center;
+  -fx-text-decoration: none;
+  -fx-font-family: "Arial Rounded MT Bold";
+  -fx-display: inline-block;
+  -fx-font-size: 15px;
+  -fx-background-radius: 50px;
+  -fx-border-radius: 50px;
+  -fx-border-width: 2px;
+  -fx-border-color: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+}
+
+#findXIntButton: hover{
+    -fx-background-color: #f0f0f0;
+    -fx-color: white;
+}
+
+
+#findVertexButton{
+  -fx-background-color: rgb(63, 63, 63);
+  -fx-color: black;
+  -fx-padding: 5px 15px;
+  -fx-text-align: center;
+  -fx-text-decoration: none;
+  -fx-font-family: "Arial Rounded MT Bold";
+  -fx-display: inline-block;
+  -fx-font-size: 15px;
+  -fx-background-radius: 50px;
+  -fx-border-radius: 50px;
+  -fx-border-width: 2px;
+  -fx-border-color: linear-gradient(to right, #ff0844 0%, #ffb199 100%);
+}
+
+#findVertexButton: hover{
+    -fx-background-color: #f0f0f0;
+    -fx-color: white;
+}
+
+
+#findfxButton{
+  -fx-background-color: rgb(63, 63, 63);
+  -fx-color: black;
+  -fx-padding: 5px 15px;
+  -fx-text-align: center;
+  -fx-text-decoration: none;
+  -fx-font-family: "Arial Rounded MT Bold";
+  -fx-display: inline-block;
+  -fx-font-size: 15px;
+  -fx-background-radius: 50px;
+  -fx-border-radius: 50px;
+  -fx-border-width: 2px;
+  -fx-border-color: linear-gradient(to right, #2af598 0%, #009efd 100%);
+}
+
+#findfxButton: hover{
+    -fx-background-color: #f0f0f0;
+    -fx-color: white;
+}
+
+#findYButton{
+  -fx-background-color: rgb(63, 63, 63);
+  -fx-color: black;
+  -fx-padding: 5px 15px;
+  -fx-text-align: center;
+  -fx-text-decoration: none;
+  -fx-font-family: "Arial Rounded MT Bold";
+  -fx-display: inline-block;
+  -fx-font-size: 15px;
+  -fx-background-radius: 50px;
+  -fx-border-radius: 50px;
+  -fx-border-width: 2px;
+  -fx-border-color: linear-gradient(to right, #6e45e2 0%, #88d3ce 100%);
+}
+
+#findYButton: hover{
+    -fx-background-color: #f0f0f0;
+    -fx-color: white;
+}

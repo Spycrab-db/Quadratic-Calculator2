@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GraphingSceneController">
+    <columnConstraints>
+        <ColumnConstraints />
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+        <AnchorPane prefHeight="349.0" prefWidth="647.0" GridPane.rowIndex="1">
+         <children>
+            <Label layoutX="228.0" layoutY="14.0" text="Transformation from">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="21.0" />
+               </font>
+            </Label>
+            <Button layoutX="559.0" layoutY="308.0" mnemonicParsing="false" onAction="#goBack" prefHeight="26.0" prefWidth="74.0" text="Done">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="14.0" />
+               </font></Button>
+            <Label layoutX="293.0" layoutY="45.0" text="f(x) = x²">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="verticalTranslationLabel" layoutX="17.0" layoutY="130.0" text="vertical translation">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="reflectionLabel" layoutX="17.0" layoutY="210.0" text="reflection in x-axis">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="stretchFactorLabel" layoutX="17.0" layoutY="257.0" text="stretch factor">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="horizontalTranslationLabel" layoutX="18.0" layoutY="90.0" text="horizontal translation">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="17.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+    </children>
+</GridPane>
