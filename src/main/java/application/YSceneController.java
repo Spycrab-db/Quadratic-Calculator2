@@ -11,6 +11,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
@@ -19,17 +20,22 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class VertexSceneController implements Initializable {
+public class YSceneController implements Initializable {
     private Stage stage;
     private Scene scene;
     private Parent root;
 
-    @FXML
-    private Slider accuracySlider;
-    @FXML
-    private Label decimalPlacesLabel;
-
+    double x;
     public int precision;
+
+    @FXML
+    TextField xTextField;
+    @FXML
+    Label decimalPlacesLabel;
+    @FXML
+    Slider accuracySlider;
+    @FXML
+    Label errorLabel;
 
 
     public void goBack(MouseEvent event) throws IOException {
@@ -49,26 +55,31 @@ public class VertexSceneController implements Initializable {
         });
     }
 
-    public void enter(ActionEvent event) throws IOException {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../resources/view/ShowVertexScene.fxml"));
+    public void enter(ActionEvent event){
+        try{
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("view/ShowYScene.fxml"));
             root = loader.load();
-            ShowVertexSceneController showVertexSceneController = loader.getController();
-            showVertexSceneController.calculateVertex(Global.getAValue(),Global.getBValue(),Global.getCValue(), precision);
+            x = Double.parseDouble(xTextField.getText());
+            ShowYSceneController showYSceneControllerObject = loader.getController();
+            showYSceneControllerObject.calculateY(Global.getAValue(), Global.getBValue(), Global.getCValue(), x, precision);
 
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             scene = new Scene(root);
-            scene.getStylesheets().add(getClass().getResource("../resources/css/XIntAndVertex.css").toExternalForm());
+            scene.getStylesheets().add(getClass().getResource("css/YScene.css").toExternalForm());
             scene.setFill(Color.TRANSPARENT);
 
-            stage.setScene(scene);
             stage.centerOnScreen();
+            stage.setScene(scene);
             stage.show();
         }
-        catch(Exception e){
+        catch(NumberFormatException | IOException e){
+            errorLabel.setText("Invalid input for x");
+        }
+        catch(Exception e ){
             System.out.println(e);
         }
     }
+
     public void close(MouseEvent event){
         Global.close(event);
     }

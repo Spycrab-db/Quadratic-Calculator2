@@ -13,15 +13,15 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("../resources/view/BeginningScene.fxml"));
-        Image icon = new Image("resources/images/Quadratic Symbol.png"); //Getting icon
+        Parent root = FXMLLoader.load(getClass().getResource("view/BeginningScene.fxml"));
+        Image icon = new Image("application/images/Quadratic Symbol.png"); //Getting icon
 
         primaryStage.setTitle("Quadratic Calculator"); //Setting title
         primaryStage.getIcons().add(icon); //Setting the icon
         primaryStage.initStyle(StageStyle.TRANSPARENT);
 
         Scene beginningScene = new Scene(root); //Create scene object with parent root
-        beginningScene.getStylesheets().add(getClass().getResource("../resources/css/BeginningScene.css").toExternalForm());
+        beginningScene.getStylesheets().add(getClass().getResource("css/BeginningScene.css").toExternalForm());
         beginningScene.setFill(Color.TRANSPARENT);
         primaryStage.setScene(beginningScene);
         primaryStage.centerOnScreen();

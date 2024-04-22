@@ -57,10 +57,10 @@ public class MenuSceneController {
     }
 
     public void goBack(MouseEvent event) throws IOException {
-        root = FXMLLoader.load((getClass().getResource("../resources/view/BeginningScene.fxml")));
+        root = FXMLLoader.load((getClass().getResource("view/BeginningScene.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
-        scene.getStylesheets().add(getClass().getResource("../resources/css/BeginningScene.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("css/BeginningScene.css").toExternalForm());
         scene.setFill(Color.TRANSPARENT);
         stage.setScene(scene);
         stage.centerOnScreen();
@@ -72,7 +72,7 @@ public class MenuSceneController {
         try{
             double discriminant = ((Math.pow(Global.getBValue(),2)) - 4 * Global.getAValue() * Global.getCValue());
             if (discriminant < 0){
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("../resources/view/ShowXIntScene.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("view/ShowXIntScene.fxml"));
                 root = loader.load();
                 ShowXIntController showXIntObject = loader.getController();
                 showXIntObject.theXIntLabel.setText("");
@@ -80,7 +80,7 @@ public class MenuSceneController {
 
                 stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 scene = new Scene(root);
-                scene.getStylesheets().add(getClass().getResource("../resources/css/XIntAndVertex.css").toExternalForm());
+                scene.getStylesheets().add(getClass().getResource("css/XIntAndVertex.css").toExternalForm());
                 scene.setFill(Color.TRANSPARENT);
 
                 stage.setScene(scene);
@@ -95,10 +95,10 @@ public class MenuSceneController {
 
         //If there are intercepts:
         try {
-            root = FXMLLoader.load((getClass().getResource("../resources/view/FindXIntScene.fxml")));
+            root = FXMLLoader.load((getClass().getResource("view/FindXIntScene.fxml")));
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             scene = new Scene(root);
-            scene.getStylesheets().add(getClass().getResource("../resources/css/XIntAndVertex.css").toExternalForm());
+            scene.getStylesheets().add(getClass().getResource("css/XIntAndVertex.css").toExternalForm());
             scene.setFill(Color.TRANSPARENT);
 
             stage.setScene(scene);
@@ -112,10 +112,10 @@ public class MenuSceneController {
 
 
     public void goToVertexScene(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("../resources/view/VertexScene.fxml"));
+        root = FXMLLoader.load(getClass().getResource("view/VertexScene.fxml"));
         stage = (Stage)((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
-        scene.getStylesheets().add(getClass().getResource("../resources/css/XIntAndVertex.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("css/XIntAndVertex.css").toExternalForm());
         stage.setScene(scene);
         stage.setScene(scene);
         scene.setFill(Color.TRANSPARENT);
@@ -125,10 +125,10 @@ public class MenuSceneController {
     }
     public void goToYScene(ActionEvent event) throws IOException {
         try {
-            root = FXMLLoader.load((getClass().getResource("../resources/view/YScene.fxml")));
+            root = FXMLLoader.load((getClass().getResource("view/YScene.fxml")));
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             scene = new Scene(root);
-            scene.getStylesheets().add(getClass().getResource("../resources/css/YScene.css").toExternalForm());
+            scene.getStylesheets().add(getClass().getResource("css/YScene.css").toExternalForm());
 
             stage.setScene(scene);
             scene.setFill(Color.TRANSPARENT);
@@ -142,14 +142,14 @@ public class MenuSceneController {
     }
     public void goToGraphingScene(ActionEvent event) throws IOException {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../resources/view/GraphingScene.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("view/GraphingScene.fxml"));
             root = loader.load();
             GraphingSceneController graphingSceneController = loader.getController();
             graphingSceneController.displayTransformations(Global.getAValue(), Global.getBValue(), Global.getCValue());
 
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             scene = new Scene(root);
-            scene.getStylesheets().add(getClass().getResource("../resources/css/GraphingScene.css").toExternalForm());
+            scene.getStylesheets().add(getClass().getResource("css/GraphingScene.css").toExternalForm());
             stage.setScene(scene);
             scene.setFill(Color.TRANSPARENT);
 

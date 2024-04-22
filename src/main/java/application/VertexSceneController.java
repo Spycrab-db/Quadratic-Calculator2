@@ -12,7 +12,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
@@ -20,7 +19,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class FindXIntController implements Initializable {
+public class VertexSceneController implements Initializable {
     private Stage stage;
     private Scene scene;
     private Parent root;
@@ -52,14 +51,14 @@ public class FindXIntController implements Initializable {
 
     public void enter(ActionEvent event) throws IOException {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../resources/view/ShowXIntScene.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("view/ShowVertexScene.fxml"));
             root = loader.load();
-            ShowXIntController showXIntObject = loader.getController();
-            showXIntObject.calculateXInt(Global.getAValue(), Global.getBValue(), Global.getCValue(), precision);
+            ShowVertexSceneController showVertexSceneController = loader.getController();
+            showVertexSceneController.calculateVertex(Global.getAValue(),Global.getBValue(),Global.getCValue(), precision);
 
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             scene = new Scene(root);
-            scene.getStylesheets().add(getClass().getResource("../resources/css/XIntAndVertex.css").toExternalForm());
+            scene.getStylesheets().add(getClass().getResource("css/XIntAndVertex.css").toExternalForm());
             scene.setFill(Color.TRANSPARENT);
 
             stage.setScene(scene);
