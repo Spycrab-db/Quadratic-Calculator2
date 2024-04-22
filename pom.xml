@@ -5,13 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>me.gavinyan</groupId>
-    <artifactId>quadraticcalculator</artifactId>
+    <artifactId>quadratic-calculator</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>quadraticcalculator</name>
+    <name>quadratic-calculator</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <junit.version>5.10.0</junit.version>
     </properties>
 
     <dependencies>
