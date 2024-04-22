@@ -34,7 +34,7 @@
         <sourceDirectory>${project.basedir}/src</sourceDirectory>
         <resources>
           <resource>
-            <directory>${project.basedir}/src</directory>
+            <directory>${project.basedir}/src/resources</directory>
           </resource>
         </resources>
 
