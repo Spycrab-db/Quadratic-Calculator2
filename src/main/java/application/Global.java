@@ -53,13 +53,22 @@ public final class Global {
         Scene scene = new Scene(root); //Apply the root node of MenuScene to the new stage's scene
         this.getClass().getResource("css/MenuSceneAmyCrisp.css").toExternalForm();
 
-        String css = switch (randomColorInt) { //Generate random color scheme depending on the random integer
-            case 1 -> this.getClass().getResource("css/MenuSceneBluePurple.css").toExternalForm();
-            case 2 -> this.getClass().getResource("css/MenuSceneBlueOrange.css").toExternalForm();
-            case 3 -> this.getClass().getResource("css/MenuSceneBlueGreen.css").toExternalForm();
-            default -> this.getClass().getResource("css/MenuSceneAmyCrisp.css").toExternalForm(); //number 4
+        String css;
+        switch (randomColorInt) { //Generate random color scheme depending on the random integer
+            case 1:
+                css = this.getClass().getResource("css/MenuSceneBluePurple.css").toExternalForm();
+                break;
+            case 2:
+                css = this.getClass().getResource("css/MenuSceneBlueOrange.css").toExternalForm();
+                break;
+            case 3:
+                css = this.getClass().getResource("css/MenuSceneBlueGreen.css").toExternalForm();
+                break;
+            default:
+                css = this.getClass().getResource("css/MenuSceneAmyCrisp.css").toExternalForm();
+                break; //number 4
             //Defining css as the styling sheet
-        };
+        }
         scene.getStylesheets().add(css); //Import the styling sheet
         scene.setFill(Color.TRANSPARENT);
         stage.setScene(scene); //Set the scene as MenuScene.fxml (Changing the scene of the stage to MenuScene)
@@ -77,13 +86,22 @@ public final class Global {
         Scene scene = new Scene(root); //Apply the root node of MenuScene to the new stage's scene
         this.getClass().getResource("css/MenuSceneAmyCrisp.css").toExternalForm();
 
-        String css = switch (randomColorInt) {
-            case 1 -> this.getClass().getResource("css/MenuSceneBluePurple.css").toExternalForm();
-            case 2 -> this.getClass().getResource("css/MenuSceneBlueOrange.css").toExternalForm();
-            case 3 -> this.getClass().getResource("css/MenuSceneBlueGreen.css").toExternalForm();
-            default -> this.getClass().getResource("css/MenuSceneAmyCrisp.css").toExternalForm(); //default
+        String css;
+        switch (randomColorInt) {
+            case 1:
+                css = this.getClass().getResource("css/MenuSceneBluePurple.css").toExternalForm();
+                break;
+            case 2:
+                css = this.getClass().getResource("css/MenuSceneBlueOrange.css").toExternalForm();
+                break;
+            case 3:
+                css = this.getClass().getResource("css/MenuSceneBlueGreen.css").toExternalForm();
+                break;
+            default:
+                css = this.getClass().getResource("css/MenuSceneAmyCrisp.css").toExternalForm();
+                break; //default
             //Create the styling sheet
-        };
+        }
         scene.getStylesheets().add(css); //Import the styling sheet
         scene.setFill(Color.TRANSPARENT);
         stage.setScene(scene); //Set the scene as MenuScene.fxml (Changing the scene of the stage to MenuScene)
